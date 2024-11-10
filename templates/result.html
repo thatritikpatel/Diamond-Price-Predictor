@@ -1,31 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff6f91, #ff80ab);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
-            margin: 100px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
             max-width: 600px;
-            background-color: rgb(21, 197, 147);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ff6f91;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 28px;
             color: #333;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+        }
+
+        #finalResult {
+            font-size: 32px;
+            color: #ff6f91;
+            font-weight: 600;
+            background: #f8f8f8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        #finalResult:hover {
+            color: #fff;
+            background: #ff6f91;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            #finalResult {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>The Diamond price will be <span id="finalResult">{{final_result}}</span></h1>
     </div>
+
 </body>
 </html>

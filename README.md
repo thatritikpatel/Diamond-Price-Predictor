@@ -8,7 +8,7 @@
 
 Here's a video demo of the project:
 
-https://github.com/user-attachments/assets/02edafd6-b63e-4e1f-a97c-ef55b2df8f46
+https://github.com/user-attachments/assets/3c3e12ef-5dec-4600-9b8d-c89faf09798b
 
 
 
@@ -150,6 +150,47 @@ We evaluate the model using common regression metrics such as:
 
 ---
 
+## 🧠 Model Evaluation and Selection
+
+In our quest to predict the price of diamonds with precision, we evaluated several regression models. Here's a summary of their performance:
+
+| Model          | R² Score       |
+|----------------|----------------|
+| Linear Regression | 0.9363       |
+| Lasso              | 0.9364       |
+| Ridge             | 0.9363       |
+| ElasticNet       | 0.8553       |
+
+After rigorous testing and validation, **Lasso Regression** emerged as the best model for our task with an impressive R² score of **0.9364**.
+
+### 🌟 Why Lasso Regression?
+
+Lasso Regression stands out for its ability to perform feature selection by shrinking some coefficients to zero, which helps in handling high-dimensional data. This property is particularly useful in our case as it simplifies the model without sacrificing accuracy, making it both efficient and interpretable.
+
+---
+
+### 📊 Model Insights
+
+1. **Linear Regression**: A straightforward model that provides a good baseline with an R² score of 0.9363. It assumes a linear relationship between the features and the target variable.
+2. **Lasso Regression**: Our top performer, Lasso Regression, not only predicts accurately but also eliminates irrelevant features, improving model interpretability.
+3. **Ridge Regression**: Similar to Linear Regression, Ridge adds a penalty on the size of coefficients to prevent overfitting, achieving a comparable R² score of 0.9363.
+4. **ElasticNet**: This model combines the properties of both Lasso and Ridge. Despite its flexibility, it scored lower with an R² of 0.8553, suggesting it may not be the best fit for our dataset.
+
+### 🔍 Choosing the Best Model
+
+Given the R² scores, **Lasso Regression** was selected as the best model, offering the highest accuracy while maintaining simplicity. Its ability to handle multicollinearity and perform feature selection makes it a robust choice for predicting diamond prices.
+
+---
+
+### 📈 Next Steps
+
+With our model chosen, the next steps include further fine-tuning and validation to ensure its robustness across different datasets. Additionally, we can explore deploying the model using a web application for real-time diamond price predictions.
+
+Stay tuned for more updates on our journey to perfecting the art of diamond price prediction! 💎📊
+
+---
+
+
 ## 🎯 Usage
 
 Once the model is trained, it can be used to predict the price of diamonds based on the provided features. Users can input diamond attributes like `carat`, `cut`, `color`, `clarity`, and the 3D dimensions (`x`, `y`, `z`) into the trained model to get an estimated price.
@@ -203,4 +244,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 - Ritik Patel - [ritik.patel129@gmail.com]
-- Project Link: [https://github.com/thatritikpatel/Rental-Bike-Share-Prediction]"# Diamond-Price-Predictor" 
+- Project Link: [https://github.com/thatritikpatel/Diamond-Price-Predictor]"# Diamond-Price-Predictor" 
